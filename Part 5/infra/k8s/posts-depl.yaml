@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app:  posts
+        app: posts
     spec:
       containers:
         - name: posts
@@ -23,7 +23,6 @@ metadata:
 spec:
   selector:
     app: posts
-  type: ClusterIP
   ports:
     - name: posts
       protocol: TCP

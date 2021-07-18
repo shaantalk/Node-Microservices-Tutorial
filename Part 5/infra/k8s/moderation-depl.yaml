@@ -23,7 +23,6 @@ metadata:
 spec:
   selector:
     app: moderation
-  type: ClusterIP
   ports:
     - name: moderation
       protocol: TCP

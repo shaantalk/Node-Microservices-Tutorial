@@ -23,7 +23,6 @@ metadata:
 spec:
   selector:
     app: comments
-  type: ClusterIP
   ports:
     - name: comments
       protocol: TCP

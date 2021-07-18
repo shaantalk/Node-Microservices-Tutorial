@@ -23,7 +23,6 @@ metadata:
 spec:
   selector:
     app: query
-  type: ClusterIP
   ports:
     - name: query
       protocol: TCP
