@@ -48,14 +48,21 @@ app.post('/events', (req, res) => {
   res.send({});
 });
 
-app.listen(4002, async () => {
+app.listen(4002, () => {
   console.log('Listening on 4002');
 
-  const res = await axios.get('http://event-bus-srv:4005/events');
-
-  for (let event of res.data) {
-    console.log('Processing event:', event.type);
-
-    handleEvent(event.type, event.data);
-  }
+  // axios.get('http://event-bus-srv:4005/events')
+  //   .then(response => {
+  //       return response.data
+  //   })
+  //   .then(data => {
+  //     for (let event of data) {
+  //       console.log('Processing event:', event.type);
+    
+  //       handleEvent(event.type, event.data);
+  //     }
+  //   })
+  //   .catch(error => {
+  //       console.log(error.response.data.error)
+  //   });
 });
